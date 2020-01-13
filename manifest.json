@@ -1,0 +1,34 @@
+{
+  "manifest_version": 1,
+  "id": "opensensemap-adapter",
+  "name": "OpenSenseMap",
+  "short_name": "OpenSenseMap",
+  "version": "0.1.0",
+  "description": "Connect sensors from https://opensensemap.org",
+  "homepage_url": "https://github.com/tim-hellhake/opensensemap-adapter#readme",
+  "license": "MPL-2.0",
+  "author": "Tim Hellhake",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "adapter",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "options": {
+    "schema": {
+      "properties": {
+        "boxIds": {
+          "items": {
+            "title": "An opensense box id",
+            "type": "string"
+          },
+          "title": "A list of opensense box ids",
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  }
+}
