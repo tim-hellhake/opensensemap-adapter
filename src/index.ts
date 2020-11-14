@@ -6,6 +6,6 @@
 
 'use strict';
 
-import { GoogleHomeAdapter } from './opensensemap-adapter';
+import { OpenSenseMapAdapter } from './opensensemap-adapter';
 
-export = (addonManager: any, manifest: any) => new GoogleHomeAdapter(addonManager, manifest);
+export = (addonManager: any, manifest: any) => new OpenSenseMapAdapter(addonManager, manifest);

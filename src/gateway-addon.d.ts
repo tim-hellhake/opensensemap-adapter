@@ -4,6 +4,12 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
+interface Link {
+    rel: string;
+    mediaType: string;
+    href: string;
+}
+
 declare module 'gateway-addon' {
     class Property {
         constructor(device: Device, name: string, propertyDescr: {});
@@ -12,8 +18,10 @@ declare module 'gateway-addon' {
 
     class Device {
         protected '@context': string;
+        protected '@type': string[];
         protected name: string;
         protected description: string;
+        protected links: Link[];
 
         constructor(adapter: Adapter, id: string);
 
