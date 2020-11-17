@@ -114,8 +114,8 @@ class OpenSenseBox extends Device {
 
       if (property) {
         if (sensor.lastMeasurement && sensor.lastMeasurement.value) {
-          property.setCachedValue(sensor.lastMeasurement.value);
-          this.notifyPropertyChanged(property);
+          const numberValue = Number.parseFloat(sensor.lastMeasurement.value);
+          property.setCachedValueAndNotify(numberValue);
         }
       } else {
         console.warn(`Could not find property for sensor ${id}`);
