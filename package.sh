@@ -1,5 +1,8 @@
 #!/bin/bash
 
+npm install
+npm run build
+
 rm -rf node_modules
 npm install --production
 rm -rf node_modules/.bin
