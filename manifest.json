@@ -3,7 +3,7 @@
   "id": "opensensemap-adapter",
   "name": "OpenSenseMap",
   "short_name": "OpenSenseMap",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Connect sensors from https://opensensemap.org",
   "homepage_url": "https://github.com/tim-hellhake/opensensemap-adapter#readme",
   "license": "MPL-2.0",
