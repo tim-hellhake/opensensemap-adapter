@@ -32,7 +32,9 @@ interface Config {
 const SCHEMA_UNITS: { [key: string]: string } = {
   '°C': 'degree celsius',
   '%': 'percent',
-  'µg/m³': 'micrograms per cubic metre',
+  // Supported in gateway 1.0.0
+  //'µg/m³': 'micrograms per cubic metre',
+  'µg/m³': 'µg/m³',
   'hPa': 'hectopascal',
   'V': 'volt'
 };
