@@ -87,12 +87,21 @@ class OpenSenseBox extends Device {
         }
       }
 
+      let multipleOf = 1;
+
+      switch(schemaType) {
+        case '%':
+          multipleOf = 0.1
+          break;
+      }
+
       const property = new Property(this, id, {
         '@type': schemaType,
         type: 'number',
         title: sensor.title,
         unit,
-        readOnly: true
+        readOnly: true,
+        multipleOf
       });
 
       this.properties.set(id, property);
